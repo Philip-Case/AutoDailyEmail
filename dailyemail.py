@@ -19,8 +19,10 @@ import time
 # Email credentials and set
 SMTP_SERVER = 'smtp.gmail.com'  # Change if using a different email provider
 SMTP_PORT = 587
-EMAIL_ADDRESS = 'philipbcase@gmail.com'
-EMAIL_PASSWORD = '100WallStreet!'
+import os
+
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 # Email content
 def create_email_report():
